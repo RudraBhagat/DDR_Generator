@@ -892,9 +892,15 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    inspection_pdf = Path(args.inspection)
-    thermal_pdf = Path(args.thermal)
-    output_dir = Path(args.output)
+    project_root = Path(__file__).parent.parent
+
+    def resolve(p: str) -> Path:
+        path = Path(p)
+        return path if path.is_absolute() else project_root / path
+
+    inspection_pdf = resolve(args.inspection)
+    thermal_pdf = resolve(args.thermal)
+    output_dir = resolve(args.output)
 
     if not inspection_pdf.exists():
         raise FileNotFoundError(f"Inspection file not found: {inspection_pdf}")
