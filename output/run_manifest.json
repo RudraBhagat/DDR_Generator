@@ -1,0 +1,16 @@
+{
+  "inspection_pdf": "D:\\Projects\\DDR_Generator\\input\\inspection_report.pdf",
+  "thermal_pdf": "D:\\Projects\\DDR_Generator\\input\\thermal_report.pdf",
+  "outputs": {
+    "markdown": "D:\\Projects\\DDR_Generator\\output\\DDR_Report.md",
+    "json": "D:\\Projects\\DDR_Generator\\output\\DDR_Report.json",
+    "images_dir": "D:\\Projects\\DDR_Generator\\output\\images"
+  },
+  "counts": {
+    "observations": 16,
+    "inspection_images": 143,
+    "thermal_images": 60,
+    "thermal_findings": 30,
+    "area_sections": 9
+  }
+}
